@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FlavorFuse - Social Network For Food Enthusiasts</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bicon.min.css">
+    <!-- Flat Icon CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/flaticon.css">
+    <!-- audio & video player CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/plyr.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/slick.min.css">
+    <!-- nice-select CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/nice-select.css">
+    <!-- perfect scrollbar css -->
+    <link rel="stylesheet" href="../static/css/plugins/perfect-scrollbar.css">
+    <!-- light gallery css -->
+    <link rel="stylesheet" href="../static/css/plugins/lightgallery.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="bg-transparent">
+    <main>
+        <div class="main-wrapper pb-0 mb-0">
+            <div class="timeline-wrapper">
+                <div class="timeline-header">
+                    <div class="container-fluid p-0">
+                        <!-- Flash messages -->
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <div class="flash-message-container">
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% endwith %}
+                        <!-- Tabs and forms for account settings -->
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-6">
+                                <div class="timeline-logo-area d-flex align-items-center">
+                                    <div class="timeline-logo">
+                                        <a href="index.html">
+                                            <img src="../static/images/logo/logo.png" alt="timeline logo">
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="timeline-tagline login-area">
+                                    <h6 class="tagline">It’s helps you to connect and share with the people in your life</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-page-wrapper">
+                    <div class="container-fluid p-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="timeline-bg-content bg-img" data-bg="../static/images/timeline/pexls.jpg">
+                                    <h3 class="timeline-bg-title">Where Cultures Collide, Flavors Unite.</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                                <div class="signup-form-wrapper">
+                                    <!-- <div id="loginForm"> -->
+                                    <div id="login" style="display:none;">
+                                        <div class="signup-inner text-center">
+                                            <h3 class="title">Login</h3>
+                                            <form class="signup-inner--form" action="{{ url_for('auth.login') }}" method="post">
+                                                {{ login_form.hidden_tag() }}
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        {{ login_form.email_or_username() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ login_form.password() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="checky-sec">
+                                                            <div class="fgt-sec">
+                                                                {{ login_form.remember_me() }}
+                                                                <label for="c1">
+                                                                    <span></span>
+                                                                </label>
+                                                                <small>Remember me</small>
+                                                            </div><!--fgt-sec end-->
+                                                            <a href="javascript:void(0);" title="" onclick="toggleForm('reset_account')">Forgot Password?</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ login_form.submit() }}
+                                                    </div>
+                                                    <div class="login-resources">
+                                                        <h4>Login Via Social Account</h4>
+                                                        <!-- <ul>
+                                                            <li><a href="/auth/login/google"  title="" class="google-button"><i class="fab fa-google"></i>Login Via Google</a></li>
+                                                            <li><a href="/auth/login/github" title="" class="github"><i class="fab fa-github"></i>Login Via GitHub</a></li>
+                                                            <li><a href="/auth/login/facebook" title="" class="fb"><i class="fab fa-facebook"></i>Login Via Facebook</a></li>
+                                                        </ul> -->
+                                                        <ul>
+                                                            <li><a href="{{ url_for('auth.login_with_provider', provider='google') }}" class="google-button">
+                                                                <i class="fab fa-google"></i> Login Via Google</a></li>
+                                                            <li><a href="{{ url_for('auth.login_with_provider', provider='github') }}" class="github">
+                                                                <i class="fab fa-github"></i> Login Via GitHub</a></li>
+                                                            <li><a href="{{ url_for('auth.login_with_provider', provider='facebook') }}" class="fb">
+                                                                <i class="fab fa-facebook"></i> Login Via Facebook</a></li>
+                                                        </ul>
+                                                    </div><!--login-resources end-->
+                                                </div>
+                                            </form>
+                                            <p class="terms-condition">Not a member? <a href="javascript:void(0);" class="switch-btn" onclick="toggleForm('create_Account')">Register</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- <div id="create_AccountForm" style="display: none;"> -->
+                                        <!-- <div id="create_AccountForm"> -->
+                                        <div id="create_Account" style="display:none;">
+                                        <div class="signup-inner text-center">
+                                            <h3 class="title">Create An Account</h3>
+                                            <form class="signup-inner--form" action="{{ url_for('auth.sign_up') }}" method="post">
+                                                {{ register_form.hidden_tag() }}
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        {{ register_form.email_createaccount() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ register_form.username_createaccount() }}
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        {{ register_form.firstname() }}
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        {{ register_form.lastname() }}
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        {{ register_form.gender() }}
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        {{ register_form.age() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ register_form.country() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ register_form.submit_createaccount() }}
+                                                    </div>
+                                                </div>
+                                                <h6 class="terms-condition">I have read & accepted the <a href="#">terms of use</a></h6>
+                                            </form>
+                                            <p class="terms-condition">Already have an account? <a href="javascript:void(0);" class="switch-btn" onclick="toggleForm('login')">Log In</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- <div id="reset_accountForm"> -->
+                                    <div id="reset_account" style="display:none;">
+                                    <!-- <div id="reset_accountForm" style="display: none;"> -->
+                                        <div class="signup-inner text-center">
+                                            <h3 class="title">Reset Password</h3>
+                                            <form class="signup-inner--form" action="{{ url_for('auth.reset_account') }}" method="post">
+                                                {{ reset_password_form.hidden_tag() }}
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        {{ reset_password_form.email() }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        {{ reset_password_form.submit() }}
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <p class="terms-condition">Remember your password? <a href="javascript:void(0);" class="switch-btn" onclick="toggleForm('login')">Log In</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="../static/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="../static/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Popper JS -->
+    <script src="../static/js/vendor/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="../static/js/plugins/slick.min.js"></script>
+    <!-- nice select JS -->
+    <script src="../static/js/plugins/nice-select.min.js"></script>
+    <!-- audio video player JS -->
+    <script src="../static/js/plugins/plyr.min.js"></script>
+    <!-- perfect scrollbar js -->
+    <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
+    <!-- light gallery js -->
+    <script src="../static/js/plugins/lightgallery-all.min.js"></script>
+    <!-- image loaded js -->
+    <script src="../static/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope filter js -->
+    <script src="../static/js/plugins/isotope.pkgd.min.js"></script>
+    <!-- Main JS -->
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/main1.js"></script>
+    <script src="../static/js/scripta.js"></script>
+
+    
+
+
+    <script>
+        function toggleForm(formType) {
+            const forms = ['login', 'create_Account', 'reset_account'];
+    
+            // Hide all forms
+            forms.forEach(form => {
+                document.getElementById(form).style.display = 'none';
+            });
+    
+            // Show the selected form
+            document.getElementById(formType).style.display = 'block';
+        }
+    
+        // Initialize by showing the correct form based on the passed form type
+        window.onload = function () {
+            const formType = '{{ form_type }}';
+            toggleForm(formType);
+        };
+    </script>
+
+
+</body>
+
+</html>

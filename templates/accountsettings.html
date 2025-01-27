@@ -1,0 +1,1187 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Adda - Social Network HTML Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bicon.min.css">
+    <!-- Flat Icon CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/flaticon.css">
+    <!-- audio & video player CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/plyr.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/slick.min.css">
+    <!-- nice-select CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/nice-select.css">
+    <!-- perfect scrollbar css -->
+    <link rel="stylesheet" href="../static/css/plugins/perfect-scrollbar.css">
+    <!-- light gallery css -->
+    <link rel="stylesheet" href="../static/css/plugins/lightgallery.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style1.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+    <!-- header area start -->
+    {% include '_navbar.html' %}
+    <!-- header area end -->
+    <!-- header area start -->
+    <header>
+        <div class="mobile-header-wrapper sticky d-block d-lg-none">
+            <div class="mobile-header position-relative ">
+                <div class="mobile-logo">
+                    <a href="index.html">
+                        <img src="../static/images/logo/logo-white.png" alt="logo">
+                    </a>
+                </div>
+                <div class="mobile-menu w-100">
+                    <ul>
+                        <li>
+                            <button class="notification request-trigger"><i class="flaticon-users"></i>
+                                <span>03</span>
+                            </button>
+                            <ul class="frnd-request-list">
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-1.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-2.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-3.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="notification"><i class="flaticon-notification"></i>
+                                <span>03</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="chat-trigger notification"><i class="flaticon-chats"></i>
+                                <span>04</span>
+                            </button>
+                            <div class="mobile-chat-box">
+                                <div class="live-chat-title">
+                                    <!-- profile picture end -->
+                                    <div class="profile-thumb">
+                                        <a href="profile.html">
+                                            <figure class="profile-thumb-small profile-active">
+                                                <img src="../static/images/profile/profile-small-15.jpg" alt="profile picture">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- profile picture end -->
+                                    <div class="posted-author">
+                                        <h6 class="author"><a href="profile.html">Robart Marloyan</a></h6>
+                                        <span class="active-pro">active now</span>
+                                    </div>
+                                    <div class="live-chat-settings ml-auto">
+                                        <button class="chat-settings"><img src="../static/images/icons/settings.png" alt=""></button>
+                                        <button class="close-btn"><img src="../static/images/icons/close.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="message-list-inner">
+                                    <ul class="message-list custom-scroll">
+                                        <li class="text-friends">
+                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                            <div class="message-time">10 minute ago</div>
+                                        </li>
+                                        <li class="text-author">
+                                            <p>Many desktop publishing packages and web page editors</p>
+                                            <div class="message-time">5 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>packages and web page editors </p>
+                                            <div class="message-time">2 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                            <div class="message-time">10 minute ago</div>
+                                        </li>
+                                        <li class="text-author">
+                                            <p>Many desktop publishing packages and web page editors</p>
+                                            <div class="message-time">5 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>packages and web page editors </p>
+                                            <div class="message-time">2 minute ago</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chat-text-field mob-text-box">
+                                    <textarea class="live-chat-field custom-scroll" placeholder="Text Message"></textarea>
+                                    <button class="chat-message-send" type="submit" value="submit">
+                                        <img src="../static/images/icons/plane.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="search-trigger">
+                                <i class="search-icon flaticon-search"></i>
+                                <i class="close-icon flaticon-cross-out"></i>
+                            </button>
+                            <div class="mob-search-box">
+                                <form class="mob-search-inner">
+                                    <input type="text" placeholder="Search Here" class="mob-search-field">
+                                    <button class="mob-search-btn"><i class="flaticon-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-header-profile">
+                    <!-- profile picture end -->
+                    <div class="profile-thumb profile-setting-box">
+                        <a href="javascript:void(0)" class="profile-triger">
+                            <figure class="profile-thumb-middle">
+                                <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                            </figure>
+                        </a>
+                        <div class="profile-dropdown text-left">
+                            <div class="profile-head">
+                                <h5 class="name"><a href="#">Madison Howard</a></h5>
+                                <a class="mail" href="#">mailnam@mail.com</a>
+                            </div>
+                            <div class="profile-body">
+                                <ul>
+                                    <li><a href="profile.html"><i class="flaticon-user"></i>Profile</a></li>
+                                    <li><a href="#"><i class="flaticon-message"></i>Inbox</a></li>
+                                    <li><a href="#"><i class="flaticon-document"></i>Activity</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"><i class="flaticon-settings"></i>Setting</a></li>
+                                    <li><a href="signup.html"><i class="flaticon-unlock"></i>Sing out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile picture end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header area end -->
+
+    <section class="profile-account-setting">
+        <div class="container">
+            <div class="account-tabs-setting">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="acc-leftbar">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-link {% if active_tab == 'account' %}active{% endif %}" 
+                                   id="nav-acc-tab" 
+                                   href="{{ url_for('user.account') }}" 
+                                   role="tab" 
+                                   aria-controls="nav-acc" 
+                                   aria-selected="{% if active_tab == 'account' %}true{% else %}false{% endif %}"
+                                   {% if not current_user.has_password %} aria-disabled="true" class="disabled" {% endif %}>
+                                    <i class="la la-cogs"></i> Account Setting
+                                </a>
+                        
+                                <a class="nav-link {% if active_tab == 'password' %}active{% endif %}" 
+                                   id="nav-password-tab" 
+                                   href="{{ url_for('user.change_password') }}" 
+                                   role="tab" 
+                                   aria-controls="nav-password" 
+                                   aria-selected="{% if active_tab == 'password' %}true{% else %}false{% endif %}">
+                                    <i class="fa fa-lock"></i> Change Password
+                                </a>
+                        
+                                <!-- <a class="nav-link {% if active_tab == 'notification' %}active{% endif %}" 
+                                   id="nav-notification-tab" 
+                                   href="{{ url_for('user.view_notifications') }}" 
+                                   role="tab" 
+                                   aria-controls="nav-notification" 
+                                   aria-selected="{% if active_tab == 'notification' %}true{% else %}false{% endif %}"
+                                   {% if not current_user.has_password %} aria-disabled="true" class="disabled" {% endif %}>
+                                    <i class="fa fa-flash"></i> Notifications
+                                </a> -->
+
+                                <a class="nav-link {% if active_tab == 'notification' %}active{% endif %}" 
+                                    id="nav-notification-tab" 
+                                    href="{{ url_for('user.view_notifications') }}" 
+                                    role="tab" 
+                                    aria-controls="nav-notification" 
+                                    aria-selected="{% if active_tab == 'notification' %}true{% else %}false{% endif %}"
+                                    {% if not current_user.has_password %} aria-disabled="true" class="disabled" {% endif %}>
+                                        <i class="fa fa-flash"></i> Notifications
+                                </a>
+
+                                <!-- <a class="nav-link {% if active_tab == 'requests' %}active{% endif %}" 
+                                    href="{{ url if url else '#' }}" 
+                                    role="tab" 
+                                    aria-controls="nav-requests" 
+                                    aria-selected="{% if active_tab == 'requests' %}true{% else %}false{% endif %}">
+                                    <i class="fa fa-group"></i> Requests
+                                </a> -->
+
+
+                                <a class="nav-link {% if active_tab == 'requests' %}active{% endif %}" 
+                                   id="nav-requests-tab" 
+                                   href="{{ url_for('user.fetch_friend_requests') }}" 
+                                   role="tab" 
+                                   aria-controls="nav-requests" 
+                                   aria-selected="{% if active_tab == 'requests' %}true{% else %}false{% endif %}"
+                                   {% if not current_user.has_password %} aria-disabled="true" class="disabled" {% endif %}>
+                                    <i class="fa fa-group"></i> Requests
+                                </a>
+                                
+                        
+                                <a class="nav-link {% if active_tab == 'deactivate' %}active{% endif %}" 
+                                   id="nav-deactivate-tab" 
+                                   href="{{ url_for('user.deactivate_account') }}" 
+                                   role="tab" 
+                                   aria-controls="nav-deactivate" 
+                                   aria-selected="{% if active_tab == 'deactivate' %}true{% else %}false{% endif %}"
+                                   {% if not current_user.has_password %} aria-disabled="true" class="disabled" {% endif %}>
+                                    <i class="fa fa-random"></i> Deactivate Account
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content" id="nav-tabContent">
+                            <!-- Account Settings Tab -->
+                            <div class="tab-pane fade {% if active_tab == 'account' %}show active{% endif %}" id="nav-acc" role="tabpanel" aria-labelledby="nav-acc-tab">
+                                <div class="acc-setting">
+                                    <h3>Account Information</h3>
+                                    {% if accountinfo_form %}
+                                        <form action="{{ url_for('user.account') }}" method="POST" enctype="multipart/form-data" id="account-info-form">
+                                            {{ accountinfo_form.hidden_tag() }}
+                                            
+                                            <!-- Account Fields (Username, Email, etc.) -->
+                                            <div class="cp-field">
+                                                <h5>Username</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.username(class="form-control") }}
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Email</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.email(class="form-control", required=True) }}
+                                                    <i class="fa fa-envelope"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>First Name</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.first_name(class="form-control", required=True) }}
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Last Name</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.last_name(class="form-control", required=True) }}
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Phone Number</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.phone(class="form-control", required=True) }}
+                                                    <i class="fa fa-phone"></i>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="cp-field">
+                                                <label for="profile_pic">Profile Picture</label>
+                                                <div class="custom-file">
+                                                    {{ accountinfo_form.profile_pic(class="custom-file-input") }}
+                                                    <label class="custom-file-label">
+                                                        {% if user.profilepic %}
+                                                            {{ user.profilepic.split('/')[-1] }}
+                                                        {% else %}
+                                                            No file selected
+                                                        {% endif %}
+                                                    </label>
+                                                </div>
+                                            
+                                                <!-- Optionally, Display Existing Profile Picture -->
+                                                {% if user.profilepic %}
+                                                    <div class="existing-file-preview mt-2">
+                                                        <img src="{{ user.get_profile_pic_url() }}" 
+                                                             alt="Current Profile Picture" 
+                                                             style="max-width: 150px; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                            
+                                            <div class="cp-field">
+                                                <label for="cover_pic">Cover Picture</label>
+                                                <div class="custom-file">
+                                                    {{ accountinfo_form.cover_pic(class="custom-file-input") }}
+                                                    <label class="custom-file-label">
+                                                        {% if user.coverpic %}
+                                                            {{ user.coverpic.split('/')[-1] }}
+                                                        {% else %}
+                                                            No file selected
+                                                        {% endif %}
+                                                    </label>
+                                                </div>
+                                            
+                                                <!-- Optionally, Display Existing Cover Picture -->
+                                                {% if user.coverpic %}
+                                                    <div class="existing-file-preview mt-2">
+                                                        <img src="{{ user.get_cover_pic_url() }}" 
+                                                             alt="Current Cover Picture" 
+                                                             style="max-width: 150px; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Age</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.user_age(class="form-control", required=True) }}
+                                                    <i class="fa fa-birthday-cake"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Gender</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.gender(class="form-control", required=True) }}
+                                                </div>
+                                            </div>
+                                            <div class="cp-field">
+                                                <h5>Country</h5>
+                                                <div class="cpp-fiel">
+                                                    {{ accountinfo_form.country(class="nice-select", required=True) }}
+                                                </div>
+                                            </div>
+                                            <div class="save-stngs pd2">
+                                                <ul>
+                                                    <li><button type="button" class="btn btn-primary" id="saveBtn">Save Changes</button></li>
+                                                    <li><button type="button" class="btn btn-secondary" id="resetBtn">Reset</button></li>
+                                                </ul>
+                                            </div><!--save-stngs end-->
+                                        </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Confirmation Modal for Save -->
+                            <div class="modal" tabindex="-1" role="dialog" id="confirmModal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Confirm Changes</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to save these changes?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn_custom btn-secondary-custom"  id="cancelBtn" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn_custom btn-primary-custom" id="confirmSave">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Change Password Tab -->
+                            <!-- <div class="tab-pane fade {% if active_tab == 'password' %}show active{% endif %}" id="nav-password" role="tabpanel">
+                                <div class="acc-setting">
+                                    <h3>Change Password</h3>
+                                    <form id="password-form" method="POST" action="{{ url_for('user.change_password') }}">
+                                        {{ changepassword_form.hidden_tag() }}
+                                        
+                                        {% if current_user.is_verified and current_user.password_hash %}
+                                        <div class="cp-field">
+                                            <h5>Old Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.old_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        
+                                        <div class="cp-field">
+                                            <h5>New Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.new_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="cp-field">
+                                            <h5>Repeat Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.confirm_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="save-stngs pd2">
+                                            <ul>
+                                                <li><button type="submit" class="btn btn-primary">Save Setting</button></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+
+                            <!-- Change Password Tab -->
+                            <div class="tab-pane fade {% if active_tab == 'password' %}show active{% endif %}" id="nav-password" role="tabpanel">
+                                <div class="acc-setting">
+                                    <h3>{{ 'Set Password' if not current_user.is_verified else 'Change Password' }}</h3>
+                                    <form id="password-form" method="POST" action="{{ url_for('user.change_password') }}">
+                                        {{ changepassword_form.hidden_tag() }}
+                                        
+                                        {% if current_user.is_verified %}
+                                        <div class="cp-field">
+                                            <h5>Current Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.old_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        
+                                        <div class="cp-field">
+                                            <h5>New Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.new_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="cp-field">
+                                            <h5>Confirm Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ changepassword_form.confirm_password(class="form-control") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="save-stngs pd2">
+                                            <ul>
+                                                <li><button type="submit" class="btn btn-primary">{{ 'Set Password' if not current_user.is_verified else 'Save Changes' }}</button></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Notifications Tab -->
+                            <div class="tab-pane fade {% if active_tab == 'notification' %}show active{% endif %}" id="nav-notification" role="tabpanel" aria-labelledby="nav-notification-tab">
+                                <div class="custom-acc-setting p-4">
+                                    <h3 class="mb-4">Notifications</h3>
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            
+                                    <!-- Filters and Buttons -->
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <!-- Filter Dropdown -->
+                                        <div class="custom-notifications-filters d-flex align-items-center">
+                                            <label for="notification-filter" class="me-2">Filter:</label>
+                                            <select id="notification-filter" class="form-select form-select-sm" style="width: 200px;" onchange="applyFilter(this.value)">
+                                                <option value="all" {% if request.args.get('filter') == 'all' %}selected{% endif %}>All</option>
+                                                <option value="read" {% if request.args.get('filter') == 'read' %}selected{% endif %}>Read</option>
+                                                <option value="unread" {% if request.args.get('filter') == 'unread' %}selected{% endif %}>Unread</option>
+                                                <option value="newest" {% if request.args.get('filter') == 'newest' %}selected{% endif %}>Newest</option>
+                                                <option value="oldest" {% if request.args.get('filter') == 'oldest' %}selected{% endif %}>Oldest</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div class="custom-action-buttons">
+                                            <button id="delete-notification-btn" class="btn btn-outline-danger btn-sm me-2" disabled>Delete</button>
+                                            <button id="mark-as-read-btn" class="btn btn-outline-primary btn-sm" disabled>Mark as Read</button>
+                                            <button id="mark-as-unread-btn" class="btn btn-outline-secondary btn-sm" disabled>Mark as Unread</button>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Select All Checkbox Positioned Below Filter -->
+                                    <div class="custom-select-all-container">
+                                        <label class="custom-select-all">
+                                            <input type="checkbox" id="select-all-notifications" onclick="selectAllNotifications()">
+                                            Select All
+                                        </label>
+                                    </div>
+                            
+                                    <!-- Notifications List -->
+                                    <div id="notifications-list">
+                                        {% if notifications %}
+                                            {% for notification in notifications %}
+                                            <div class="notification-card d-flex align-items-center p-3 mb-3 shadow-sm {% if not notification.is_read %}unread-notification{% endif %}" data-id="{{ notification.id }}">
+                                                <div class="notification-image">
+                                                    <img src="{{ notification.sender_image_url }}" alt="Sender" class="rounded-circle">
+                                                </div>
+                                                <div class="notification-details">
+                                                    <strong class="notification-type">{{ notification.type or 'Notification' }}</strong>
+                                                    <span class="notification-message">{{ notification.message or '' }}</span>
+                                                    <small class="notification-timestamp">{{ notification.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+                                                </div>
+                                                <div class="notification-checkbox">
+                                                    <input type="checkbox" class="form-check-input" data-id="{{ notification.id }}">
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <p class="text-center text-muted">No notifications to display.</p>
+                                        {% endif %}
+                                    </div>
+                            
+                                    <!-- Pagination Controls -->
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <nav aria-label="Notifications pagination">
+                                            <ul class="pagination">
+                                                <!-- Previous Button -->
+                                                <li class="page-item {% if current_page|default(1) == 1 %}disabled{% endif %}">
+                                                    <a class="page-link" href="?page={{ (current_page|default(1) - 1) if (current_page|default(1) - 1) >= 1 else 1 }}&filter={{ filter|default('all') }}" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+
+                                                <!-- Page Numbers -->
+                                                {% for page_num in range(1, total_pages|default(1) + 1) %}
+                                                    <li class="page-item {% if page_num == current_page|default(1) %}active{% endif %}">
+                                                        <a class="page-link" href="?page={{ page_num }}&filter={{ filter|default('all') }}">{{ page_num }}</a>
+                                                    </li>
+                                                {% endfor %}
+
+                                                <!-- Next Button -->
+                                                <li class="page-item {% if current_page|default(1) == total_pages|default(1) %}disabled{% endif %}">
+                                                    <a class="page-link" href="?page={{ (current_page|default(1) + 1) if (current_page|default(1) + 1) <= total_pages|default(1) else total_pages|default(1) }}&filter={{ filter|default('all') }}" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>                                  
+                                </div>
+                            </div>
+                            <!-- Delete Confirmation Modal -->
+                            <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete the selected notifications?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-danger custom-delete-btn">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Requests Tab -->
+                            <div class="tab-pane fade {% if active_tab == 'requests' %}show active{% endif %}" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab">
+                                <div class="acc-setting">
+                                    <h3>Requests</h3>
+                                    <div class="requests-list" id="requests-container">
+                                        <!-- Requests will be dynamically rendered here -->
+                                    </div>
+                                    
+                                    <!-- Pagination Controls -->
+                                    <div id="pagination-container" class="pagination-wrapper">
+                                        <!-- Pagination buttons will be dynamically added here -->
+                                    </div>
+                                </div><!--acc-setting end-->
+                            </div>
+
+                            <!-- Modal -->
+                            <div id="friend-modal" class="modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Friend Request</h5>
+                                            <button type="button" onclick="closeFriendRequestModal()" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p id="modal-message"></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" onclick="closeFriendRequestModal()" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Deactivate Tab -->
+                            <div class="tab-pane fade {% if active_tab == 'deactivate' %}show active{% endif %}" id="nav-deactivate" role="tabpanel" aria-labelledby="nav-deactivate-tab">
+                                <div class="acc-setting">
+                                    <h3>Deactivate Account</h3>
+                                    <form method="POST" action="{{ url_for('user.deactivate_account') }}">
+                                        {{ deactivateacc_form.hidden_tag() }}  <!-- Include CSRF token -->
+                                        <div class="cp-field">
+                                            <h5>Email</h5>
+                                            <div class="cpp-fiel">
+                                                {{ deactivateacc_form.email(class="form-control", placeholder="Email") }}
+                                                <i class="fa fa-envelope"></i>
+                                            </div>
+                                            {% for error in deactivateacc_form.email.errors %}
+                                                <span class="text-danger">{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="cp-field">
+                                            <h5>Password</h5>
+                                            <div class="cpp-fiel">
+                                                {{ deactivateacc_form.password(class="form-control", placeholder="Password") }}
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                            {% for error in deactivateacc_form.password.errors %}
+                                                <span class="text-danger">{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="cp-field">
+                                            <h5>Please Explain Further</h5>
+                                            {{ deactivateacc_form.explanation(class="form-control", placeholder="Your explanation here") }}
+                                            {% for error in deactivateacc_form.explanation.errors %}
+                                                <span class="text-danger">{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="cp-field">
+                                            <div class="fgt-sec">
+                                                {{ deactivateacc_form.email_option_out() }}
+                                                <label for="c4">
+                                                    <span></span>
+                                                </label>
+                                                <small>Email option out</small>
+                                            </div>
+                                            <p>If you choose to deactivate your account, you can opt out of further emails.</p>
+                                        </div>
+                                        <div class="save-stngs pd3">
+                                            <ul>
+                                                <li><button type="submit" name="deactivate" value="deactivate" class="btn btn-danger">Deactivate Account</button></li>
+                                            </ul>
+                                        </div><!--save-stngs end-->
+                                    </form>
+                                </div><!--acc-setting end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--account-tabs-setting end-->
+        </div> 
+        
+    </section>
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="../static/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="../static/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Popper JS -->
+    <script src="../static/js/vendor/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="../static/js/plugins/slick.min.js"></script>
+    <!-- nice select JS -->
+    <script src="../static/js/plugins/nice-select.min.js"></script>
+    <!-- audio video player JS -->
+    <script src="../static/js/plugins/plyr.min.js"></script>
+    <!-- perfect scrollbar js -->
+    <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
+    <!-- light gallery js -->
+    <script src="../static/js/plugins/lightgallery-all.min.js"></script>
+    <!-- image loaded js -->
+    <script src="../static/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope filter js -->
+    <script src="../static/js/plugins/isotope.pkgd.min.js"></script>
+    <!-- Main JS -->
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/main1.js"></script>
+    <!-- Add this in the head section of your base template (base.html) -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // $(document).ready(function() {
+        //     // When "Save Changes" button is clicked, show the confirmation modal
+        //     $('#saveBtn').click(function() {
+        //         var myModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+        //         myModal.show(); // Show the confirmation modal
+        //     });
+
+        //     // When "Confirm" button in the modal is clicked, submit the form
+        //     $('#confirmSave').click(function() {
+        //         var myModal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+        //         myModal.hide(); // Hide the modal
+
+        //         // Add a hidden input field indicating the action (save)
+        //         $('#account-info-form').append('<input type="hidden" name="action" value="save">');
+
+        //         // Submit the form
+        //         $('#account-info-form').submit();
+        //     });
+
+        //     // When "Cancel" button in the modal is clicked, close the modal
+        //     $('#confirmModal .btn-secondary-custom').click(function() {
+        //         var myModal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+        //         myModal.hide(); // Hide the modal
+        //     });
+
+        //     // Close the modal if the "X" button (close) is clicked
+        //     $('#confirmModal .close').click(function() {
+        //         var myModal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+        //         myModal.hide(); // Hide the modal
+        //     });
+
+        //     // Reset button, reload the page to reset form values
+        //     $('#resetBtn').click(function() {
+        //         location.reload(); // Reload the page to reset form values
+        //     });
+        // });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update Profile Picture Label
+            document.getElementById('profile_pic').addEventListener('change', function (event) {
+                var fileName = event.target.files[0] ? event.target.files[0].name : 'No file selected';
+                document.getElementById('profile-pic-label').textContent = fileName;
+            });
+
+            // Update Cover Picture Label
+            document.getElementById('cover_pic').addEventListener('change', function (event) {
+                var fileName = event.target.files[0] ? event.target.files[0].name : 'No file selected';
+                document.getElementById('cover-pic-label').textContent = fileName;
+            });
+        });
+    </script>
+    <script>
+        function applyFilter(filter) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('filter', filter);
+            url.searchParams.set('page', 1); // Reset to page 1 when changing filter
+            window.location.href = url.toString(); // Reload the page
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Enable/Disable Action Buttons Based on Checkbox Selection
+            function updateButtonState() {
+                const selectedCheckboxes = $('#notifications-list .form-check-input:checked');
+                const hasSelected = selectedCheckboxes.length > 0;
+
+                // Update the "Delete" button state
+                $('#delete-notification-btn').prop('disabled', !hasSelected);
+
+                // Determine if we should enable "Mark as Read" or "Mark as Unread"
+                let hasUnread = false;
+                let hasRead = false;
+                selectedCheckboxes.each(function () {
+                    const notificationCard = $(this).closest('.notification-card');
+                    if (notificationCard.hasClass('unread-notification')) {
+                        hasUnread = true;
+                    } else {
+                        hasRead = true;
+                    }
+                });
+
+                // Enable/Disable "Mark as Read" and "Mark as Unread" buttons
+                $('#mark-as-read-btn').prop('disabled', !hasUnread);
+                $('#mark-as-unread-btn').prop('disabled', !hasRead);
+            }
+
+            // "Select All" Functionality
+            $('#select-all-notifications').on('change', function () {
+                const isChecked = this.checked;
+
+                // Check or uncheck all notification checkboxes
+                $('#notifications-list .form-check-input').prop('checked', isChecked);
+
+                // Update the button state
+                updateButtonState();
+            });
+
+            // Update Button State on Individual Checkbox Change
+            $(document).on('change', '.form-check-input', function () {
+                const allCheckboxes = $('#notifications-list .form-check-input');
+                const checkedCheckboxes = $('#notifications-list .form-check-input:checked');
+
+                // Update the "Select All" checkbox state
+                $('#select-all-notifications').prop('checked', allCheckboxes.length === checkedCheckboxes.length);
+
+                // Update the button state
+                updateButtonState();
+            }); 
+            
+            // Event listener for "Mark as Read" button
+            $('#mark-as-read-btn').on('click', function () {
+                const selectedCheckboxes = $('#notifications-list .form-check-input:checked');
+                const notificationIds = [];
+
+                // Collect all selected notification IDs
+                selectedCheckboxes.each(function () {
+                    const notificationId = $(this).data('id');
+                    notificationIds.push(notificationId);
+                });
+
+                console.log('Notification IDs to mark as read:', notificationIds);  // Log the IDs
+
+                if (notificationIds.length > 0) {
+                    // Get CSRF token from the meta tag
+                    const csrfToken = $('meta[name="csrf-token"]').attr('content');
+                    
+                    // Send AJAX request to Flask to mark notifications as read
+                    $.ajax({
+                        url: '/user/mark_as_read',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        headers: {
+                            'X-CSRFToken': csrfToken  // Include the CSRF token in the request headers
+                        },
+                        data: JSON.stringify({ notification_ids: notificationIds }),  // Ensure data is formatted correctly
+                        success: function(response) {
+                            if (response.success) {
+                                selectedCheckboxes.each(function () {
+                                    $(this).closest('.notification-card').removeClass('unread-notification');
+                                });
+                                alert("Notifications marked as read.");
+                            } else {
+                                alert("Failed to mark notifications as read.");
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('AJAX Error:', error); // Log the error for more insight
+                            alert("An error occurred while marking notifications as read.");
+                        }
+                    });
+                } else {
+                    alert("Please select at least one notification.");
+                }
+            });
+
+            // Event listener for "Delete" button
+            $('#delete-notification-btn').on('click', function () {
+                const selectedCheckboxes = $('#notifications-list .form-check-input:checked');
+                const notificationIds = [];
+
+                // Collect all selected notification IDs
+                selectedCheckboxes.each(function () {
+                    const notificationId = $(this).data('id'); // Get the notification ID
+                    notificationIds.push(notificationId);
+                });
+
+                console.log('Notification IDs to delete:', notificationIds);  // Log the IDs
+
+                if (notificationIds.length > 0) {
+                    // Show the confirmation modal
+                    $('#deleteConfirmationModal').modal('show');
+                    
+                    // If the user confirms the deletion
+                    $('#deleteConfirmationModal .btn-danger').on('click', function() {
+                        // Get CSRF token from the meta tag
+                        const csrfToken = $('meta[name="csrf-token"]').attr('content');
+                        
+                        // Send AJAX request to Flask to delete notifications
+                        $.ajax({
+                            url: '/user/delete_notifications',  // Flask route for deleting notifications
+                            method: 'POST',
+                            contentType: 'application/json',
+                            headers: {
+                                'X-CSRFToken': csrfToken  // Include CSRF token in the request headers
+                            },
+                            data: JSON.stringify({ notification_ids: notificationIds }),  // Ensure data is formatted correctly
+                            success: function(response) {
+                                if (response.success) {
+                                    // Remove the notifications from the UI
+                                    selectedCheckboxes.each(function () {
+                                        $(this).closest('.notification-card').remove();
+                                    });
+                                    alert("Selected notifications deleted.");
+                                } else {
+                                    alert("Failed to delete notifications.");
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                console.error('AJAX Error:', error); // Log the error for more insight
+                                alert("An error occurred while deleting notifications.");
+                            },
+                            complete: function() {
+                                // Close the modal after the request is completed
+                                $('#deleteConfirmationModal').modal('hide');
+                            }
+                        });
+                    });
+
+                } else {
+                    alert("Please select at least one notification.");
+                }
+            });
+
+            // Event listener for "Mark as Unread" button
+            $('#mark-as-unread-btn').on('click', function () {
+                const selectedCheckboxes = $('#notifications-list .form-check-input:checked');
+                const notificationIds = [];
+
+                // Collect all selected notification IDs
+                selectedCheckboxes.each(function () {
+                    const notificationId = $(this).data('id'); // Get the notification ID
+                    notificationIds.push(notificationId);
+                });
+
+                console.log('Notification IDs to mark as unread:', notificationIds);  // Log the IDs
+
+                if (notificationIds.length > 0) {
+                    // Get CSRF token from the meta tag
+                    const csrfToken = $('meta[name="csrf-token"]').attr('content');
+                    
+                    // Send AJAX request to Flask to mark notifications as unread
+                    $.ajax({
+                        url: '/user/mark_as_unread',  // New route for marking as unread
+                        method: 'POST',
+                        contentType: 'application/json',
+                        headers: {
+                            'X-CSRFToken': csrfToken  // Include the CSRF token in the request headers
+                        },
+                        data: JSON.stringify({ notification_ids: notificationIds }),  // Ensure data is formatted correctly
+                        success: function(response) {
+                            if (response.success) {
+                                selectedCheckboxes.each(function () {
+                                    $(this).closest('.notification-card').addClass('unread-notification');
+                                });
+                                alert("Notifications marked as unread.");
+                            } else {
+                                alert("Failed to mark notifications as unread.");
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('AJAX Error:', error); // Log the error for more insight
+                            alert("An error occurred while marking notifications as unread.");
+                        }
+                    });
+                } else {
+                    alert("Please select at least one notification.");
+                }
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>W
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script>
+        // Définir la fonction closeFriendRequestModal() avant tout autre code
+        function closeFriendRequestModal() {
+            var modal = new bootstrap.Modal(document.getElementById('friend-modal'));
+            modal.hide();
+        }
+        $(document).ready(function () {
+            const requestsContainer = $('.requests-list');
+            const paginationContainer = $('#pagination-container');
+            const friendModal = $('#friend-modal');
+            const modalMessage = $('#modal-message');
+            const csrfToken = $('meta[name="csrf-token"]').attr('content');
+    
+            // Fetch and render friend requests
+            function fetchFriendRequests(page = 1) {
+                $.ajax({
+                    url: `/user/fetch_friend_requests?page=${page}`,
+                    method: 'GET',
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRFToken': csrfToken // Add CSRF token in headers
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            renderRequests(response.requests);
+                            renderFriendRequestPagination(response.total_pages, response.current_page);
+                        } else {
+                            console.error(response.error);
+                        }
+                    },
+                    error: function (xhr) {
+                        console.error('Failed to fetch friend requests');
+                    }
+                });
+            }
+    
+            // Render requests dynamically
+            function renderRequests(requests) {
+                requestsContainer.empty();
+                if (requests.length === 0) {
+                    requestsContainer.append('<p>No pending friend requests</p>');
+                    return;
+                }
+                requests.forEach(req => {
+                    const requestHTML = `
+                        <div class="request-details" data-id="${req.id}">
+                            <div class="noty-user-img">
+                                <img src="${req.profile_pic}" alt="${req.username}">
+                            </div>
+                            <div class="request-info">
+                                <h3>${req.username}</h3>
+                                <span>${req.job_title}</span>
+                            </div>
+                            <div class="accept-feat">
+                                <ul>
+                                    <li><button type="submit" class="accept-req">Accept</button></li>
+                                    <li><button type="submit" class="close-req"><i class="fa fa-close"></i></button></li>
+                                </ul>
+                            </div><!--accept-feat end-->
+                        </div><!--request-details end-->
+                    `;
+                    requestsContainer.append(requestHTML);
+                });
+            }
+    
+            // Render pagination dynamically
+            function renderFriendRequestPagination(totalPages, currentPage) {
+                paginationContainer.empty();
+                if (totalPages <= 1) return;
+    
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = `
+                        <button class="pagination-btn friendrequest-btn ${i === currentPage ? 'active-page' : ''}" data-page="${i}">
+                            ${i}
+                        </button>
+                    `;
+                    paginationContainer.append(pageButton);
+                }
+            }
+    
+            // Accept Friend Request
+            requestsContainer.on('click', '.accept-req', function () {
+                const requestId = $(this).closest('.request-details').data('id');
+                $.ajax({
+                    url: `/user/accept_friend_request/${requestId}`,
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken // Add CSRF token in headers
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            modalMessage.text('User has become your friend.');
+                            friendModal.modal('show');
+                            fetchFriendRequests();
+                        } else {
+                            console.error(response.error);
+                        }
+                    },
+                    error: function (xhr) {
+                        console.error('Failed to accept friend request');
+                    }
+                });
+            });
+    
+            // Reject Friend Request
+            requestsContainer.on('click', '.close-req', function () {
+                const requestId = $(this).closest('.request-details').data('id');
+                $.ajax({
+                    url: `/user/reject_friend_request/${requestId}`,
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken // Add CSRF token in headers
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            modalMessage.text('Friend request has been successfully deleted.');
+                            friendModal.modal('show');
+                            fetchFriendRequests();
+                        } else {
+                            console.error(response.error);
+                        }
+                    },
+                    error: function (xhr) {
+                        console.error('Failed to reject friend request');
+                    }
+                });
+            });
+    
+            // Pagination Controls (Event Delegation)
+            $(document).on('click', '.friendrequest-btn', function () {
+                const page = $(this).data('page');
+                fetchFriendRequests(page);
+            });
+    
+            // Initial Fetch
+            fetchFriendRequests();
+        });
+    </script>
+    <script src="../static/js/scripta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+</body>
+
+</html>

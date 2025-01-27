@@ -1,0 +1,210 @@
+<header>
+    <div class="header-top sticky bg-white d-none d-lg-block">
+        <div class="container">
+            <!-- Flash messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash-message-container">
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <!-- header top navigation start -->
+                    <div class="header-top-navigation">
+                        <nav>
+                            <ul>
+                                <li class="active"><a href="{{ url_for('main.index') }}">home</a></li>
+                                <li class="msg-trigger"><a class="msg-trigger-btn" href="#a">message</a>
+                                    <div class="message-dropdown" id="a">
+                                        <div class="dropdown-title">
+                                            <p class="recent-msg">recent message</p>
+                                            <div class="message-btn-group">
+                                                <button type="button" class="search-field">New Message</button>
+                                            </div>
+                                        </div>
+                                        <ul class="dropdown-msg-list">
+                                            <li class="msg-list-item d-flex justify-content-between">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb">
+                                                    <figure class="profile-thumb-middle">
+                                                        <img src="../static/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                    </figure>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <!-- message content start -->
+                                                <div class="msg-content">
+                                                    <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                                                </div>
+                                                <!-- message content end -->
+
+                                                <!-- message time start -->
+                                                <div class="msg-time">
+                                                    <p>25 Apr 2019</p>
+                                                </div>
+                                                <!-- message time end -->
+                                            </li>
+
+                                            <li class="msg-list-item d-flex justify-content-between">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb">
+                                                    <figure class="profile-thumb-middle">
+                                                        <img src="../static/images/profile/profile-small-4.jpg" alt="profile picture">
+                                                    </figure>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <!-- message content start -->
+                                                <div class="msg-content">
+                                                    <h6 class="author"><a href="profile.html">Jhon Doe</a></h6>
+                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                                                </div>
+                                                <!-- message content end -->
+
+                                                <!-- message time start -->
+                                                <div class="msg-time">
+                                                    <p>15 May 2019</p>
+                                                </div>
+                                                <!-- message time end -->
+                                            </li>
+                                            <li class="msg-list-item d-flex justify-content-between">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb">
+                                                    <figure class="profile-thumb-middle">
+                                                        <img src="../static/images/profile/profile-small-5.jpg" alt="profile picture">
+                                                    </figure>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <!-- message content start -->
+                                                <div class="msg-content">
+                                                    <h6 class="author"><a href="profile.html">Jon Wileyam</a></h6>
+                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                                                </div>
+                                                <!-- message content end -->
+
+                                                <!-- message time start -->
+                                                <div class="msg-time">
+                                                    <p>20 Jun 2019</p>
+                                                </div>
+                                                <!-- message time end -->
+                                            </li>
+                                        </ul>
+                                        <div class="msg-dropdown-footer">
+                                            <a> 
+                                            </a>
+                                            <!-- <button hr>See all in messenger</button> -->
+                                            <button onclick="handleInboxClick()">See all in messenger</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-trigger">
+                                    <a class="msg-trigger-btn" href="#b">notification</a>
+                                    <div class="message-dropdown" id="b">
+                                        <div class="dropdown-title">
+                                            <p class="recent-msg">Notification</p>
+                                            <button onclick="navigateToNotifications()">
+                                                <i class="flaticon-settings"></i>
+                                            </button>
+                                        </div>
+                                        <!-- <ul class="dropdown-msg-list" id="notification-list"> -->
+                                            <!-- Notifications will be dynamically loaded here -->
+                                        <!-- </ul> -->
+                                        <ul class="dropdown-msg-list" id="notification-list">
+                                            {% for notification in notifications %}
+                                            <li class="msg-list-item d-flex justify-content-between">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb">
+                                                    <figure class="profile-thumb-middle">
+                                                        <img src="{{ notification.image }}" alt="profile picture">
+                                                    </figure>
+                                                </div>
+                                                <!-- profile picture end -->
+                                
+                                                <!-- message content start -->
+                                                <div class="msg-content notification-content">
+                                                    <a href="profile.html">{{ notification.actor_name }}</a>
+                                                    <p>{{ notification.message }}</p>
+                                                </div>
+                                                <!-- message content end -->
+                                
+                                                <!-- message time start -->
+                                                <div class="msg-time">
+                                                    <p>{{ notification.created_at }}</p>
+                                                </div>
+                                                <!-- message time end -->
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+
+                                        <div class="msg-dropdown-footer">
+                                            <button onclick="navigateToNotifications()">See all Notifications</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- header top navigation start -->
+                </div>
+
+                <div class="col-md-2">
+                    <!-- brand logo start -->
+                    <div class="brand-logo text-center">
+                        <a href="{{ url_for('main.index') }}">
+                            <img src="../static/images/logo/logo.png" alt="brand logo">
+                        </a>
+                    </div>
+                    <!-- brand logo end -->
+                </div>
+
+                <div class="col-md-5">
+                    <div class="header-top-right d-flex align-items-center justify-content-end">
+                        <!-- header top search start -->
+                        <div class="header-top-search">
+                            <form class="top-search-box" id="searchForm">
+                                <input type="text" placeholder="Search" class="top-search-field" id="searchInput">
+                                <button class="top-search-btn" id="searchButton"><i class="flaticon-search"></i></button>
+                            </form>
+                        </div>
+                        <!-- header top search end -->
+
+                        <!-- profile picture start -->
+                        <div class="profile-setting-box">
+                            <div class="profile-thumb-small">
+                                <a href="javascript:void(0)" class="profile-triger">
+                                    <figure>
+                                        <!-- <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture"> -->
+                                        <img src="{{ user.get_profile_pic_url() }}" alt="profile picture">
+                                    </figure>
+                                </a>
+                                <div class="profile-dropdown">
+                                    <div class="profile-head">
+                                        <h5 class="name"><a href="{{ url_for('main.profile', encoded_user_id=encode_user_id(current_user.id)) }}">{{ user.firstname }} {{ user.lastname }}</a></h5>
+                                        <a class="mail" href="{{ url_for('main.profile', encoded_user_id=encode_user_id(current_user.id)) }}">{{ user.email }}</a>
+                                    </div>
+                                    <div class="profile-body">
+                                        <ul>
+                                            <li><a href="{{ url_for('main.profile', encoded_user_id=encode_user_id(current_user.id)) }}"><i class="flaticon-user"></i>Profile</a></li>
+                                            <li><a href="{{ url_for('main.inbox') }}"><i class="flaticon-message"></i>Inbox</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="{{ url_for('user.account') }}"><i class="flaticon-settings"></i>Setting</a></li>
+                                            <li><a href="{{ url_for('auth.logout') }}"><i class="flaticon-unlock"></i>Sign out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- profile picture end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

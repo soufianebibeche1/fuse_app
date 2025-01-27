@@ -1,0 +1,1691 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Adda - Social Network HTML Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/bicon.min.css">
+    <!-- Flat Icon CSS -->
+    <link rel="stylesheet" href="../static/css/vendor/flaticon.css">
+    <!-- audio & video player CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/plyr.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/slick.min.css">
+    <!-- nice-select CSS -->
+    <link rel="stylesheet" href="../static/css/plugins/nice-select.css">
+    <!-- perfect scrollbar css -->
+    <link rel="stylesheet" href="../static/css/plugins/perfect-scrollbar.css">
+    <!-- light gallery css -->
+    <link rel="stylesheet" href="../static/css/plugins/lightgallery.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style1.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        #friendRequestModal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #friendRequestModal .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+
+        #friendszone_widget p {
+            text-align: center;
+            color: gray;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- header area start -->
+    {% include '_navbar.html' %}
+    <!-- header area end -->
+    <!-- header area start -->
+    <header>
+        <div class="mobile-header-wrapper sticky d-block d-lg-none">
+            <div class="mobile-header position-relative ">
+                <div class="mobile-logo">
+                    <a href="index.html">
+                        <img src="../static/images/logo/logo-white.png" alt="logo">
+                    </a>
+                </div>
+                <div class="mobile-menu w-100">
+                    <ul>
+                        <li>
+                            <button class="notification request-trigger"><i class="flaticon-users"></i>
+                                <span>03</span>
+                            </button>
+                            <ul class="frnd-request-list">
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-1.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-2.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frnd-request-member">
+                                        <figure class="request-thumb">
+                                            <a href="profile.html">
+                                                <img src="../static/images/profile/profile-midle-3.jpg" alt="proflie author">
+                                            </a>
+                                        </figure>
+                                        <div class="frnd-content">
+                                            <h6 class="author"><a href="profile.html">merry watson</a></h6>
+                                            <p class="author-subtitle">Works at HasTech</p>
+                                            <div class="request-btn-inner">
+                                                <button class="frnd-btn">confirm</button>
+                                                <button class="frnd-btn delete">delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="notification"><i class="flaticon-notification"></i>
+                                <span>03</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="chat-trigger notification"><i class="flaticon-chats"></i>
+                                <span>04</span>
+                            </button>
+                            <div class="mobile-chat-box">
+                                <div class="live-chat-title">
+                                    <!-- profile picture end -->
+                                    <div class="profile-thumb">
+                                        <a href="profile.html">
+                                            <figure class="profile-thumb-small profile-active">
+                                                <img src="../static/images/profile/profile-small-15.jpg" alt="profile picture">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- profile picture end -->
+                                    <div class="posted-author">
+                                        <h6 class="author"><a href="profile.html">Robart Marloyan</a></h6>
+                                        <span class="active-pro">active now</span>
+                                    </div>
+                                    <div class="live-chat-settings ml-auto">
+                                        <button class="chat-settings"><img src="../static/images/icons/settings.png" alt=""></button>
+                                        <button class="close-btn"><img src="../static/images/icons/close.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="message-list-inner">
+                                    <ul class="message-list custom-scroll">
+                                        <li class="text-friends">
+                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                            <div class="message-time">10 minute ago</div>
+                                        </li>
+                                        <li class="text-author">
+                                            <p>Many desktop publishing packages and web page editors</p>
+                                            <div class="message-time">5 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>packages and web page editors </p>
+                                            <div class="message-time">2 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                            <div class="message-time">10 minute ago</div>
+                                        </li>
+                                        <li class="text-author">
+                                            <p>Many desktop publishing packages and web page editors</p>
+                                            <div class="message-time">5 minute ago</div>
+                                        </li>
+                                        <li class="text-friends">
+                                            <p>packages and web page editors </p>
+                                            <div class="message-time">2 minute ago</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chat-text-field mob-text-box">
+                                    <textarea class="live-chat-field custom-scroll" placeholder="Text Message"></textarea>
+                                    <button class="chat-message-send" type="submit" value="submit">
+                                        <img src="../static/images/icons/plane.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="search-trigger">
+                                <i class="search-icon flaticon-search"></i>
+                                <i class="close-icon flaticon-cross-out"></i>
+                            </button>
+                            <div class="mob-search-box">
+                                <form class="mob-search-inner">
+                                    <input type="text" placeholder="Search Here" class="mob-search-field">
+                                    <button class="mob-search-btn"><i class="flaticon-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-header-profile">
+                    <!-- profile picture end -->
+                    <!-- profile picture start -->
+                    <div class="profile-setting-box">
+                        <div class="profile-thumb-small">
+                            <a href="javascript:void(0)" class="profile-triger">
+                                <figure>
+                                    <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                </figure>
+                            </a>
+                            <div class="profile-dropdown">
+                                <div class="profile-head">
+                                    <h5 class="name"><a href="#">{{ user.firstname }} {{ user.lastname }}</a></h5>
+                                    <a class="mail" href="#">{{ user.email }}</a>
+                                </div>
+                                <div class="profile-body">
+                                    <ul>
+                                        <li><a href="profile.html"><i class="flaticon-user"></i>Profile</a></li>
+                                        <li><a href="#"><i class="flaticon-message"></i>Inbox</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#"><i class="flaticon-settings"></i>Setting</a></li>
+                                        <li><a href="{{ url_for('auth.logout') }}"><i class="flaticon-unlock"></i>Sign out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile picture end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header area end -->
+
+    <main>
+
+        <div class="main-wrapper">
+            <!-- <div class="profile-banner-large bg-img" data-bg="assets/images/banner/profile-banner.jpg"> -->
+            <div class="profile-banner-large bg-img" data-bg="{{ user.get_cover_pic_url() }}"></div>
+            </div>
+            <div class="profile-menu-area bg-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="profile-picture-box">
+                                <figure class="profile-picture">
+                                    <a href="#">
+                                        <!-- <img src="../static/images/profile/profile-1.jpg" alt="profile picture"> -->
+                                        <img src="{{ user.get_profile_pic_url() }}" alt="profile picture">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 offset-lg-1">
+                            <div class="profile-menu-wrapper">
+                                <div class="main-menu-inner header-top-navigation">
+                                    <nav>
+                                        <ul class="main-menu">
+                                            <li class="active"><a href="#">timeline</a></li>
+                                            <li><a href="about.html">about</a></li>
+                                            <!-- <li><a href="photos.html">photos</a></li> -->
+                                            <li><a href="friends.html">friends</a></li>
+                                            <!-- <li class="d-inline-block d-md-none"><a href="profile.html">edit profile</a></li> -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 d-none d-md-block">
+                            <div class="profile-edit-panel">
+                                <button class="edit-btn" onclick="redirectToAccount()">edit profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 order-2 order-lg-1">
+                        <aside class="widget-area profile-sidebar">
+                            <!-- widget single item start -->
+                            <div class="card widget-item">
+                                <h4 class="widget-title">{{ user.firstname }} {{ user.lastname }}</h4>
+                                <div class="widget-body">
+                                    <div class="about-author">
+                                        <p>{{ user.bio if user.bio else "This user has not written a bio yet." }}</p>
+                                        <ul class="author-into-list">
+                                            <li><a href="#"><i class="bi bi-office-bag"></i>{{ user.job_title if user.job_title else "Not specified" }}</a></li>
+                                            <li><a href="#"><i class="bi bi-home"></i>{{ user.city if user.city else "Unknown location" }}, {{ user.country if user.country else "Unknown country" }}</a></li>
+                                            <li><a href="#"><i class="bi bi-location-pointer"></i>{{ user.address if user.address else "Address not provided" }}</a></li>
+                                            <li><a href="#"><i class="bi bi-heart-beat"></i>{{ user.hobbies if user.hobbies else "No hobbies listed" }}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- widget single item end -->
+
+                            <!-- widget single item start -->
+                            <!-- <div class="card widget-item">
+                                <h4 class="widget-title">Sweets Memories</h4>
+                                <div class="widget-body">
+                                    <div class="sweet-galley img-gallery">
+                                        <div class="row row-5">
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-1.jpg">
+                                                            <img src="../static/images/gallery/gallery-1.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-2.jpg">
+                                                            <img src="../static/images/gallery/gallery-2.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-3.jpg">
+                                                            <img src="../static/images/gallery/gallery-3.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-4.jpg">
+                                                            <img src="../static/images/gallery/gallery-4.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-5.jpg">
+                                                            <img src="../static/images/gallery/gallery-5.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-6.jpg">
+                                                            <img src="../static/images/gallery/gallery-6.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-7.jpg">
+                                                            <img src="../static/images/gallery/gallery-7.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-8.jpg">
+                                                            <img src="../static/images/gallery/gallery-8.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="gallery-tem">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="assets/images/gallery/gallery-9.jpg">
+                                                            <img src="../static/images/gallery/gallery-9.jpg" alt="sweet memory">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- widget single item end -->
+
+                            <!-- widget single item start -->
+                            <div class="card widget-item">
+                                <h4 class="widget-title">Accounts you may like</h4>
+                                <div class="widget-body">
+                                    <ul class="like-page-list-wrapper" id="random-users-list">
+                                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> <!-- CSRF Token -->
+                                        <!-- Users will be dynamically loaded here -->
+                                    </ul>
+                                    <div class="see-more-link">
+                                        <a href="#" id="load-more-users">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div id="friendRequestModal" class="modal">
+                                <div class="modal-content">
+                                    <p id="modalMessage"></p>
+                                    <button id="closeModal">Close</button>
+                                </div>
+                            </div>
+                            <!-- widget single item end -->
+                        </aside>
+                    </div>
+
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <!-- share box start -->
+                        <div class="card card-small">
+                            <div class="share-box-inner">
+                                <!-- profile picture end -->
+                                <div class="profile-thumb">
+                                    <a href="#">
+                                        <figure class="profile-thumb-middle">
+                                            <img src="../static/images/profile/profile-small-37.jpg" alt="profile picture">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- profile picture end -->
+
+                                <!-- share content box start -->
+                                <div class="share-content-box w-100">
+                                    <form class="share-text-box">
+                                        <textarea id="share-post-form" name="share" class="share-text-field" aria-disabled="true" placeholder="Say Something" data-toggle="modal" data-target="#textbox" id="email"></textarea>
+                                        <button class="btn-share" type="submit">share</button>
+                                    </form>
+                                </div>
+                                <!-- share content box end -->
+                                <!-- Modal start -->
+                                <div class="modal fade" id="textbox" aria-labelledby="textbox">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Share Your Mood</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body custom-scroll">
+                                                <textarea name="share" class="share-field-big custom-scroll" id="share-caption" placeholder="Say Something"></textarea>
+                                                <!-- File upload container -->
+                                                <div class="file-upload-container"></div>
+                                                <button type="button" class="post-share-btn" id="attach-btn">Attach File</button>
+                                                <input type="file" id="file-upload" multiple style="display: none;" />
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="post-share-btn" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="post-share-btn" id="post-btn">Post</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal end -->
+                            </div>
+                        </div>
+                        <!-- share box end -->
+
+                        <div id="post-feed">
+                            <!-- Dynamic posts will be inserted here -->
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div class="col-lg-3 order-3">
+                        <aside class="widget-area">
+                            <!-- widget single item start -->
+                            <div class="card widget-item">
+                                <h4 class="widget-title">Recent Notifications</h4>
+                                <div class="widget-body">
+                                    <ul class="like-page-list-wrapper" id="notification-listwidget">
+                                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> <!-- CSRF Token -->
+                                        <!-- Notifications will be dynamically inserted here -->
+                                    </ul>
+                                    <div class="see-more-link">
+                                        <a href="{{ url_for('user.view_notifications') }}">See More</a>
+                                    </div>
+                                </div>
+                            </div>           
+                            <!-- widget single item end -->
+
+                            <!-- widget single item start -->
+                            <div class="card widget-item">
+                                <h4 class="widget-title">Advertizement</h4>
+                                <div class="widget-body">
+                                    <div class="add-thumb">
+                                        <a href="#">
+                                            <!-- <img src="../static/images/banner/advertise.jpg" alt="advertisement"> -->
+                                            <img src="https://picsum.photos/600/600" alt="advertisement">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- widget single item end -->
+
+                            <!-- widget single item start -->
+                            <div class="card widget-item">
+                                <h4 class="widget-title">Friends Zone</h4>
+                                <div class="widget-body">
+                                    <ul class="like-page-list-wrapper" id="friendszone_widget">
+                                        <!-- Friends will be dynamically inserted here -->
+                                    </ul>
+                                    <div class="see-more-link">
+                                        <a href="#" id="loadMoreFriends">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <!-- widget single item end -->
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="bi bi-finger-index"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+    <footer class="d-none d-lg-block">
+        <div class="footer-area reveal-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-wrapper">
+                            <div class="footer-card position-relative">
+                                <div class="friends-search">
+                                    <form class="search-box">
+                                        <input type="text" placeholder="Search Your Friends" class="search-field">
+                                        <button class="search-btn"><i class="flaticon-search"></i></button>
+                                    </form>
+                                </div>
+                                <div class="friend-search-list">
+                                    <div class="frnd-search-title">
+                                        <button class="frnd-search-icon"><i class="flaticon-settings"></i></button>
+                                        <p>search friends</p>
+                                        <button class="close-btn" data-close="friend-search-list"><i class="flaticon-cross-out"></i></button>
+                                    </div>
+                                    <div class="frnd-search-inner custom-scroll">
+                                        <ul>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author">Jon Wilime</h6>
+                                                    <p>Many desktop publishing</p>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-2.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Jon Wileyam</a></h6>
+                                                    <button class="add-frnd">add friend</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                                    <button class="add-frnd">add friend</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-4.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Jon Wilime</a></h6>
+                                                    <button class="add-frnd">10 mutual friends</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-5.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Robart faul</a></h6>
+                                                    <button class="add-frnd">12 mutual friends</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                                    <button class="add-frnd">add friend</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-4.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Jon Wilime</a></h6>
+                                                    <button class="add-frnd">10 mutual friends</button>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center profile-active">
+                                                <!-- profile picture end -->
+                                                <div class="profile-thumb active">
+                                                    <a href="#">
+                                                        <figure class="profile-thumb-small">
+                                                            <img src="../static/images/profile/profile-small-5.jpg" alt="profile picture">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <!-- profile picture end -->
+
+                                                <div class="posted-author">
+                                                    <h6 class="author"><a href="profile.html">Robart faul</a></h6>
+                                                    <button class="add-frnd">12 mutual friends</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-small mb-0 active-profile-wrapper">
+                                <div class="active-profiles-wrapper">
+                                    <div class="active-profile-carousel slick-row-20 slick-arrow-style">
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="#">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-2.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-4.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-5.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-6.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-7.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-8.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-9.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-10.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-11.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-card position-relative">
+                                <div class="live-chat-inner">
+                                    <div class="chat-text-field">
+                                        <textarea class="live-chat-field custom-scroll" placeholder="Text Message"></textarea>
+                                        <button class="chat-message-send" type="submit" value="submit">
+                                            <img src="../static/images/icons/plane.png" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="chat-output-box">
+                                        <div class="live-chat-title">
+                                            <!-- profile picture end -->
+                                            <div class="profile-thumb active">
+                                                <a href="#">
+                                                    <figure class="profile-thumb-small">
+                                                        <img src="../static/images/profile/profile-small-15.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                            <!-- profile picture end -->
+                                            <div class="posted-author">
+                                                <h6 class="author"><a href="profile.html">Robart Marloyan</a></h6>
+                                                <span class="active-pro">active now</span>
+                                            </div>
+                                            <div class="live-chat-settings ml-auto">
+                                                <button class="chat-settings"><i class="flaticon-settings"></i></button>
+                                                <button class="close-btn" data-close="chat-output-box"><i class="flaticon-cross-out"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="message-list-inner">
+                                            <ul class="message-list custom-scroll">
+                                                <li class="text-friends">
+                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                                    <div class="message-time">10 minute ago</div>
+                                                </li>
+                                                <li class="text-author">
+                                                    <p>Many desktop publishing packages and web page editors</p>
+                                                    <div class="message-time">5 minute ago</div>
+                                                </li>
+                                                <li class="text-friends">
+                                                    <p>packages and web page editors </p>
+                                                    <div class="message-time">2 minute ago</div>
+                                                </li>
+                                                <li class="text-friends">
+                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                                                    <div class="message-time">10 minute ago</div>
+                                                </li>
+                                                <li class="text-author">
+                                                    <p>Many desktop publishing packages and web page editors</p>
+                                                    <div class="message-time">5 minute ago</div>
+                                                </li>
+                                                <li class="text-friends">
+                                                    <p>packages and web page editors </p>
+                                                    <div class="message-time">2 minute ago</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+    <!-- footer area start -->
+    <footer class="d-block d-lg-none">
+        <div class="footer-area reveal-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-footer-inner d-flex">
+                            <div class="mobile-frnd-search">
+                                <button class="search-toggle-btn"><i class="flaticon-search"></i></button>
+                            </div>
+                            <div class="mob-frnd-search-inner">
+                                <form class="mob-frnd-search-box d-flex">
+                                    <input type="text" placeholder="Search Your Friends" class="mob-frnd-search-field">
+                                </form>
+                            </div>
+                            <div class="card card-small mb-0 active-profile-mob-wrapper">
+                                <div class="active-profiles-mob-wrapper slick-row-10">
+                                    <div class="active-profile-mobile">
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="#">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-1.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-8.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-2.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-4.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-5.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+
+                                        <!-- profile picture end -->
+                                        <div class="single-slide">
+                                            <div class="profile-thumb active profile-active">
+                                                <a href="javascript:void(0)">
+                                                    <figure class="profile-thumb-small profile-active">
+                                                        <img src="../static/images/profile/profile-small-9.jpg" alt="profile picture">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- profile picture end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="../static/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="../static/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Popper JS -->
+    <script src="../static/js/vendor/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="../static/js/plugins/slick.min.js"></script>
+    <!-- nice select JS -->
+    <script src="../static/js/plugins/nice-select.min.js"></script>
+    <!-- audio video player JS -->
+    <script src="../static/js/plugins/plyr.min.js"></script>
+    <!-- perfect scrollbar js -->
+    <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
+    <!-- light gallery js -->
+    <script src="../static/js/plugins/lightgallery-all.min.js"></script>
+    <!-- image loaded js -->
+    <script src="../static/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope filter js -->
+    <script src="../static/js/plugins/isotope.pkgd.min.js"></script>
+    <!-- Main JS -->
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/main1.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/main2ajax.js"></script>
+
+
+
+    <script>
+        var csrfToken = $('input[name="csrf_token"]').val(); // Grab CSRF token
+        document.addEventListener('DOMContentLoaded', function () {
+            loadNotifications();
+        });
+        function loadNotifications(limit = 3) {
+            fetch(`/notifications?limit=${limit}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        const notificationList = document.getElementById('notification-listwidget');
+                        notificationList.innerHTML = ''; // Clear existing notifications
+                        data.notifications.forEach(notification => {
+                            const li = document.createElement('li');
+                            li.className = 'msg-list-item d-flex justify-content-between';
+
+                            // Check if actor_name is "Fuse" and conditionally render the link
+                            const actorElement = notification.actor_name === "Fuse"
+                                ? `<a href="#">${notification.actor_name}</a>` // Plain text for "Fuse"
+                                : `<a href="profile.html">${notification.actor_name}</a>`; // Link for others
+
+                            li.innerHTML = `
+                                <div class="profile-thumb">
+                                    <figure class="profile-thumb-middle">
+                                        <img src="${notification.image}" alt="profile picture">
+                                    </figure>
+                                </div>
+                                <div class="msg-content notification-content">
+                                    ${actorElement}
+                                    <p>${notification.message}</p>
+                                </div>
+                                <div class="msg-time">
+                                    <p>${notification.created_at}</p>
+                                </div>
+                            `;
+                            notificationList.appendChild(li);
+                        });
+                    } else {
+                        console.error(data.message);
+                    }
+                })
+                .catch(error => console.error('Error fetching notifications:', error));
+        }
+
+        function loadMoreNotifications() {
+            const currentLimit = document.querySelectorAll('#notification-list .msg-list-item').length;
+            loadNotifications(currentLimit + 3); // Load more notifications
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var currentPage = 1;
+            var csrfToken = $('input[name="csrf_token"]').val(); // Get CSRF token
+
+            // Fetch random users on page load
+            fetchRandomUsers(currentPage);
+
+            // Handle friend request button click
+            $(document).on('click', '.like-button', function() {
+                var userId = $(this).data('user-id');
+                var button = $(this);
+
+                if (button.hasClass('active')) {
+                    // Cancel friend request
+                    cancelFriendRequest(userId, button);
+                } else {
+                    // Send friend request
+                    sendFriendRequest(userId, button);
+                }
+            });
+
+            // Load more users
+            $('#load-more-users').click(function() {
+                currentPage += 1;
+                fetchRandomUsers(currentPage);
+            });
+
+            // Close modal
+            $('#closeModal').click(function() {
+                $('#friendRequestModal').hide();
+            });
+
+            function fetchRandomUsers(page) {
+                $.ajax({
+                    url: '/get_random_users',
+                    method: 'GET',
+                    headers: {
+                        'X-CSRFToken': csrfToken  // Add CSRF token in the header
+                    },
+                    data: {
+                        current_user_id: {{ current_user.id }},  // Pass the current user's ID
+                        page: page,
+                        per_page: 5
+                    },
+                    success: function(response) {
+                        var usersList = $('#random-users-list');
+                        if (page === 1) {
+                            usersList.empty(); // Clear the list only on the first load
+                        }
+                        response.forEach(function(user) {
+                            var listItem = `
+                                <li class="unorder-list">
+                                    <div class="profile-thumb">
+                                        <a href="#">
+                                            <figure class="profile-thumb-small">
+                                                <img src="${user.profile_pic}" alt="profile picture">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="unorder-list-info">
+                                        <h3 class="list-title"><a href="#">${user.username}</a></h3>
+                                        <p class="list-subtitle"><a href="#">${user.job_title}</a></p>
+                                    </div>
+                                    <button class="like-button" data-user-id="${user.id}">
+                                        <img class="heart" src="../static/images/icons/heart.png" alt="">
+                                        <img class="heart-color" src="../static/images/icons/heart-color.png" alt="">
+                                    </button>
+                                </li>
+                            `;
+                            usersList.append(listItem);
+                        });
+                    }
+                });
+            }
+
+            function sendFriendRequest(userId, button) {
+                $.ajax({
+                    url: '/send_friend_request',
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken  // Add CSRF token in the header
+                    },
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        user_id: {{ current_user.id }},  // Pass the current user's ID
+                        friend_id: userId
+                    }),
+                    success: function(response) {
+                        button.addClass('active');
+                        $('#modalMessage').text(response.message);
+                        $('#friendRequestModal').show();
+                    }
+                });
+            }
+            
+            function cancelFriendRequest(userId, button) {
+                $.ajax({
+                    url: '/cancel_friend_request',
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken  // Add CSRF token in the header
+                    },
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        user_id: {{ current_user.id }},  // Pass the current user's ID
+                        friend_id: userId
+                    }),
+                    success: function(response) {
+                        button.removeClass('active');
+                        $('#modalMessage').text(response.message);
+                        $('#friendRequestModal').show();
+                    }
+                });
+            }
+        });
+        
+
+
+    </script>
+
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let friendsPage = 1; // Track the current page of friends
+            const perPage = 5; // Number of friends to load per request
+            const csrfToken = document.querySelector('input[name="csrf_token"]').value; // Grab CSRF token
+
+            // Load initial friends
+            loadFriends(friendsPage);
+
+            // Add event listener for "See More" button
+            document.getElementById('loadMoreFriends').addEventListener('click', (e) => {
+                e.preventDefault();
+                friendsPage += 1; // Increment page number
+                loadFriends(friendsPage);
+            });
+
+            // Function to load friends
+            function loadFriends(page) {
+                fetch(`/api/fetch_friends?page=${page}&per_page=${perPage}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': csrfToken // Include CSRF token for security
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const friendsList = document.getElementById('friendszone_widget');
+
+                    if (data.friends && data.friends.length > 0) {
+                        // Clear the list if it's the first page
+                        if (page === 1) {
+                            friendsList.innerHTML = '';
+                        }
+
+                        // Append each friend to the list
+                        data.friends.forEach(friend => {
+                            const encodedUserId = encodeURIComponent(btoa(friend.id)); // Encode user ID
+
+                            const friendItem = `
+                                <li class="unorder-list">
+                                    <div class="profile-thumb">
+                                        <a href="/user/${encodedUserId}">
+                                            <figure class="profile-thumb-small">
+                                                <img src="${friend.profile_pic}" alt="profile picture">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="unorder-list-info">
+                                        <h3 class="list-title">
+                                            <a href="/user/${encodedUserId}">${friend.username}</a>
+                                        </h3>
+                                        <p class="list-subtitle"><a href="#">${friend.mutual_count} mutual</a></p>
+                                    </div>
+                                    <button class="like-button active" data-id="${friend.id}" data-action="remove" data-username="${friend.username}">
+                                        <img class="heart" src="../static/images/icons/heart.png" alt="">
+                                        <img class="heart-color" src="../static/images/icons/heart-color.png" alt="">
+                                    </button>
+                                </li>
+                            `;
+                            friendsList.insertAdjacentHTML('beforeend', friendItem);
+                        });
+
+                        attachHeartButtonListeners(); // Reattach listeners for new buttons
+                    } else {
+                        // Display "no more friends" message
+                        if (page === 1) {
+                            friendsList.innerHTML = '<p>No friends exist in your friends list</p>';
+                        } else {
+                            document.getElementById('loadMoreFriends').style.display = 'none';
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching friends:', error);
+                    const friendsList = document.getElementById('friendszone_widget');
+                    friendsList.innerHTML = '<p>Failed to load friends. Please try again later.</p>';
+                });
+            }
+
+            // Function to attach event listeners to heart buttons
+            function attachHeartButtonListeners() {
+                document.querySelectorAll('.like-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const friendId = button.dataset.id;
+                        const action = button.dataset.action;
+                        const friendUsername = button.dataset.username;
+
+                        fetch('/api/manage_friend', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrfToken
+                            },
+                            body: JSON.stringify({ friend_id: friendId, action: action }),
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.message) {
+                                if (action === 'remove') {
+                                    button.dataset.action = 'resend';
+                                    button.classList.remove('active');
+                                    showModal(`Friend ${friendUsername} has been removed from the friends list`);
+                                } else if (action === 'resend') {
+                                    button.dataset.action = 'remove';
+                                    button.classList.add('active');
+                                    showModal(`Friend request has been sent successfully. Wait for ${friendUsername}'s approval`);
+                                }
+                            } else if (data.error) {
+                                alert(data.error);
+                            }
+                        });
+                    });
+                });
+            }
+
+            // Function to show a modal (replace with your actual modal implementation)
+            function showModal(message) {
+                alert(message); // Replace with your modal implementation
+            }
+        });
+    </script>
+    <!-- Embed current_user data in a hidden input or script tag -->
+    <input type="hidden" id="current_user_id" value="{{ user.id }}">
+    <script>
+        // Alternatively, you can embed the data in a JavaScript variable
+        var current_user = {
+            id: "{{ user.id }}",
+            username: "{{ user.username }}",
+            // Add other user properties as needed
+        };
+
+        // your-script.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Access the current_user data from the hidden input or script tag
+            var currentUserId = document.getElementById('current_user_id').value;
+            console.log('Current User ID:', currentUserId);
+
+            // Or access the current_user object directly
+            console.log('Current User:', current_user);
+
+            // Use the current_user data in your button logic
+            var likeButtons = document.querySelectorAll('.post-meta-like');
+            likeButtons.forEach(function(button) {
+                button.setAttribute('data-user-id', currentUserId);
+            });
+        });
+    </script>
+
+    <script>
+        let currentPage = 1;
+
+        function loadPosts() {
+            $.ajax({
+                url: '/post/fetch_feed?page=' + currentPage,
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken  // Add CSRF token in the header if necessary
+                },
+                success: function(response) {
+                    if (response.message) {
+                        // Show "No more posts" message when no posts are available
+                        if (response.message === 'No more posts available.') {
+                            $('#post-feed').append('<div class="no-more-posts">No more posts available</div>');
+                            return;
+                        }
+                    }
+
+                    // Append posts to the feed
+                    response.forEach(post => {
+                        let mediaHtml = '';
+
+                        if (Array.isArray(post.media_urls) && post.media_urls.length > 0) {
+                            if (post.media_urls.length === 1) {
+                                // Single media item (show it larger)
+                                mediaHtml = `
+                                    <div class="post-thumb-gallery img-gallery">
+                                        <div class="row no-gutters">
+                                            <div class="col-12">
+                                                <figure class="post-thumb">
+                                                    <a class="gallery-selector" href="${post.media_urls[0]}">
+                                                        <img src="${post.media_urls[0]}" alt="post image" class="post-img-zoom">
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                            } else if (post.media_urls.length === 2) {
+                                // Two media items (show side by side)
+                                mediaHtml = `
+                                    <div class="post-thumb-gallery img-gallery">
+                                        <div class="row no-gutters">
+                                            <div class="col-6">
+                                                <figure class="post-thumb">
+                                                    <a class="gallery-selector" href="${post.media_urls[0]}">
+                                                        <img src="${post.media_urls[0]}" alt="post image" class="post-img-zoom">
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="col-6">
+                                                <figure class="post-thumb">
+                                                    <a class="gallery-selector" href="${post.media_urls[1]}">
+                                                        <img src="${post.media_urls[1]}" alt="post image" class="post-img-zoom">
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                            } else if (post.media_urls.length === 3) {
+                                // Three media items (one large, two small)
+                                mediaHtml = `
+                                    <div class="post-thumb-gallery img-gallery">
+                                        <div class="row no-gutters">
+                                            <div class="col-8">
+                                                <figure class="post-thumb">
+                                                    <a class="gallery-selector" href="${post.media_urls[0]}">
+                                                        <img src="${post.media_urls[0]}" alt="post image" class="post-img-zoom">
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <figure class="post-thumb">
+                                                            <a class="gallery-selector" href="${post.media_urls[1]}">
+                                                                <img src="${post.media_urls[1]}" alt="post image" class="post-img-zoom">
+                                                            </a>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <figure class="post-thumb">
+                                                            <a class="gallery-selector" href="${post.media_urls[2]}">
+                                                                <img src="${post.media_urls[2]}" alt="post image" class="post-img-zoom">
+                                                            </a>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                            } else if (post.media_urls.length >= 4) {
+                                // Four or more media items (grid layout)
+                                mediaHtml = `
+                                    <div class="post-thumb-gallery img-gallery">
+                                        <div class="row no-gutters">
+                                            ${post.media_urls.slice(0, 4).map((media, index) => `
+                                                <div class="col-6">
+                                                    <figure class="post-thumb">
+                                                        <a class="gallery-selector" href="${media}">
+                                                            <img src="${media}" alt="post image" class="post-img-zoom">
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>`;
+                            }
+                        }
+
+                        const postHtml = `
+                            <div class="card" id="post-${post.id}">
+                                <div class="post-title d-flex align-items-center">
+                                    <div class="profile-thumb">
+                                        <a href="/user/${btoa(post.user_id)}">
+                                            <figure class="profile-thumb-middle">
+                                                <img src="${post.profile_pic}" alt="profile picture">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="posted-author">
+                                        <h6 class="author"><a href="/user/${btoa(post.user_id)}">${post.username}</a></h6>
+                                        <span class="post-time">${post.created_at}</span>
+                                    </div>
+                                    <div class="post-settings-bar">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p class="post-desc">${post.caption}</p>
+                                    ${mediaHtml}
+                                    <div class="post-meta">
+                                        <button class="post-meta-like" id="post-like" data-post-id="${post.id}" data-user-id="${current_user.id}">
+                                            <i class="bi bi-heart-beat"></i>
+                                            <span>${post.likes_count} people like this</span>
+                                            <strong>${post.likes_count}</strong>
+                                        </button>
+                                        <ul class="comment-share-meta">
+                                            <li><button class="post-comment"><i class="bi bi-chat-bubble"></i><span>${post.comments_count}</span></button></li>
+                                            <li><button class="post-share"><i class="bi bi-share"></i><span>Share</span></button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>`;
+
+                        $('#post-feed').append(postHtml);
+                    });
+
+                    currentPage++;
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error fetching posts:", error);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            loadPosts();  // Load initial posts
+
+            // Load more posts when user scrolls
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    loadPosts();
+                }
+            });
+
+            // Zoom image functionality
+            $(document).on('click', '.post-img-zoom', function(e) {
+                e.preventDefault();
+                const imageUrl = $(this).attr('href');
+                window.open(imageUrl, '_blank');  // Open the image in a larger view
+            });
+        });
+
+        $(document).ready(function() {
+            $('#post-btn').on('click', function () {
+                // Gather the data to send
+                var caption = $('#share-caption').val(); // Get the caption text
+                var files = $('#file-upload')[0].files; // Get uploaded files
+                var formData = new FormData();
+
+                // Add caption and files to FormData
+                formData.append('caption', caption);
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('files[]', files[i]);
+                }
+
+                // Make the AJAX request
+                $.ajax({
+                    url: '/post/share_post', // Update the URL if necessary
+                    type: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken, // Include CSRF token in the request
+                    },
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            // Show flash message and reload after 5 seconds
+                            setTimeout(function() {
+                                window.location.reload(); // Reload page after 5 seconds
+                            }, 2000);
+                        } else {
+                            alert(response.message || 'An error occurred while sharing your post. Please try again.');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert('An error occurred while sharing your post.');
+                    },
+                });
+            });
+
+        
+            $(document).on('click', '.post-meta-like', function() {
+                const postId = $(this).data('post-id');
+                const userId = $(this).data('user-id');
+
+                $.ajax({
+                    url: '/post/like',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        user_id: userId,
+                        post_id: postId
+                    }),
+                    headers: {
+                        'X-CSRFToken': csrfToken  // Add CSRF token in the header if necessary
+                    },
+                    success: function(response) {
+                        if (response.status === 'liked') {
+                            // Update the like button and count
+                            $(`#post-${postId} .post-meta-like`).html(`
+                                <i class="bi bi-heart-fill"></i>
+                                <span>${response.likes_count} people like this</span>
+                                <strong>${response.likes_count}</strong>
+                            `);
+                        } else if (response.status === 'unliked') {
+                            // Update the like button and count
+                            $(`#post-${postId} .post-meta-like`).html(`
+                                <i class="bi bi-heart-beat"></i>
+                                <span>${response.likes_count} people like this</span>
+                                <strong>${response.likes_count}</strong>
+                            `);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error liking/unliking post:", error);
+                    }
+                });
+            });
+
+        });
+
+        function handleInboxClick() {
+            // Redirect to the /inbox route
+            window.location.href = '/inbox';
+        }
+
+        function navigateToNotifications() {
+            // Redirect to the /view_notifications route
+            // window.location.href = '/user/view_notifications';
+            window.location.href = "{{ url_for('user.view_notifications') }}";
+        }
+
+        function redirectToAccount() {
+            window.location.href = "{{ url_for('user.account') }}";
+        }
+        </script>
+
+</body>
+
+</html>
