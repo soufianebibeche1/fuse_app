@@ -42,22 +42,40 @@ def login_redirect():
 def sign_up_redirect():
     return redirect(url_for('auth.sign_up'))
 
+# @bp.route('/')
+# def index():
+#     # Get the current user's ID
+#     user = current_user  # Assuming you're using Flask-Login for user management
+
+#     # Fetch the recent notifications for the current user
+#     notifications = NotificationManager.get_widget_notifications(user.id, limit=5)
+    
+#     # Convert notifications to a list of dictionaries for the template
+#     notifications_data = [notification.to_dict() for notification in notifications]
+    
+#     # Fetch posts for the user and their friends
+#     posts = PostManager.fetch_friends_posts(user.id)
+#     posts_data = [post.to_dict() for post in posts]  # Convert Post objects to dicts for easy rendering
+    
+#     return render_template('index.html', user =current_user, posts=posts_data, notifications=notifications_data)
+
 @bp.route('/')
+@login_required  # Add this decorator to ensure the user is logged in
 def index():
     # Get the current user's ID
-    user_id = current_user.id  # Assuming you're using Flask-Login for user management
+    user = current_user  # Assuming you're using Flask-Login for user management
 
     # Fetch the recent notifications for the current user
-    notifications = NotificationManager.get_widget_notifications(user_id, limit=5)
+    notifications = NotificationManager.get_widget_notifications(user.id, limit=5)
     
     # Convert notifications to a list of dictionaries for the template
     notifications_data = [notification.to_dict() for notification in notifications]
     
     # Fetch posts for the user and their friends
-    posts = PostManager.fetch_friends_posts(user_id)
+    posts = PostManager.fetch_friends_posts(user.id)
     posts_data = [post.to_dict() for post in posts]  # Convert Post objects to dicts for easy rendering
     
-    return render_template('index.html', user =current_user, posts=posts_data, notifications=notifications_data)
+    return render_template('index.html', user=current_user, posts=posts_data, notifications=notifications_data)
 
 @bp.route('/profilepic/<filename>')
 def profile_pic(filename):
